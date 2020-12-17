@@ -1,0 +1,46 @@
+.container {
+    max-width: 120rem;
+
+    // Center container
+    margin: 8rem auto;
+    background-color: var(--color-grey-light-1);
+    box-shadow: var(--shadow-dark);
+
+    min-height: 50rem;
+}
+
+.header {
+    // Allow header components to inherit this specific font size
+    font-size: 1.4rem;
+    height: 7rem;
+    background-color: white;
+    border-bottom: var(--color-grey-light-2);
+
+    display: flex;
+
+    // Logo on the far left, user nav on the far right, and search in the middle
+    justify-content: space-between;
+
+    // Vertically center
+    align-items: center;
+}
+
+.content {
+    display: flex;
+}
+
+.sidebar {
+    background-color: var(--color-grey-dark-1);
+    // grow: don't want to grow if there is some space
+    // shrink: don't want to shrink if there is not enough space 
+    // base set to 18% for the navbar on the side
+    flex: 0 0 18%;
+}
+
+.hotel-view {
+    background-color: white;
+    background-color: orangered;
+
+    // Allow the container hotel view occupy (grow) the remaining of hte container space
+    flex: 1;
+}
