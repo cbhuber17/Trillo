@@ -35,11 +35,21 @@
     // shrink: don't want to shrink if there is not enough space 
     // base set to 18% for the navbar on the side
     flex: 0 0 18%;
+
+    display: flex;
+    flex-direction: column;
+
+    // Put sidebar icons at the top, legal text on the bottom
+    justify-content: space-between;
 }
 
 .hotel-view {
     background-color: white;
     background-color: orangered;
+
+    // Dummy height for now just to test the page
+    background-color: blue;
+    height: 80rem;
 
     // Allow the container hotel view occupy (grow) the remaining of hte container space
     flex: 1;
