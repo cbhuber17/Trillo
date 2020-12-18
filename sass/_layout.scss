@@ -51,6 +51,7 @@
 }
 
 .detail {
+    font-size: 1.4rem;
     display: flex;
     padding: 4.5rem;
     background-color: var(--color-grey-light-1);
@@ -74,4 +75,9 @@
 
     // Take up the remaining space
     flex: 1;
+
+    // Center the "show all button"
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
