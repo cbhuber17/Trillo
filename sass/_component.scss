@@ -251,7 +251,7 @@
 
     display: flex;
     align-items: center;
-    border-bottom: 1px solid var(--color-grey-light-2);
+    border-bottom: var(--line);
 
     &__heading {
         font-size: 2.25rem;
@@ -357,4 +357,97 @@
         box-shadow: none;
     }
 
+}
+
+// ---------------------------------------------------------
+// PARAGRAPH
+
+// last-of-type (applies to last paragraph (not last child, which is not a paragraph))
+.paragraph:not(:last-of-type) {
+    margin-bottom: 2rem;
+
+}
+
+
+// ---------------------------------------------------------
+// LIST
+.list {
+    list-style: none;
+    margin: 3rem 0;
+    padding: 3rem 0;
+    border-top: var(--line);
+    border-bottom: var(--line);
+
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+
+        // Don't grow, don't shrink, 50% width allows side-by-side
+        flex: 0 0 50%;
+        margin-bottom: .7rem;
+    }
+
+    // Put the right arrow chevron before the list elements
+    &__item::before {
+        content: "";
+        display: inline-block;
+        height: 1rem;
+        width: 1rem;
+        margin-right: .7rem;
+
+        // Older browser approach
+        // Cannot change the color of the chevron
+        // background-image: url(../img/chevron-thin-right.svg);
+        // background-size: cover;
+
+        // Newer browsers - use masks
+        // Defines an area to look through the element
+        // set the background color to a solid color, but
+        // use the mask to only have the mask contents (chevron)
+        // come through
+        background-color: var(--color-primary);
+        -webkit-mask-image: url(../img/chevron-thin-right.svg);
+        -webkit-mask-size: cover;
+        mask-image: url(../img/chevron-thin-right.svg);
+        mask-size: cover;
+
+
+    }
+}
+
+// ---------------------------------------------------------
+// RECOMMEND
+.recommend {
+
+    font-size: 1.3rem;
+    color: var(--color-grey-dark-3);
+
+    display: flex;
+    align-items: center;
+
+    &__count {
+
+        // Push the photos to the right side of the container
+        margin-right: auto;
+    }
+
+    &__friends {
+
+    }
+
+    &__photo {
+
+        // Allow the border of the photos to not shrink the photo (default border-sizing option)
+        box-sizing: content-box;
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        border: 3px solid white;
+
+        // Make photos overlapping
+        &:not(:last-child) {
+            margin-right: -1.5rem;
+        }
+    }
 }
