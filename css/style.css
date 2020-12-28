@@ -213,6 +213,10 @@ body {
       .overview__heading {
         font-size: 1.8rem;
         padding: 1.25rem 2rem; } }
+    @media only screen and (max-width: 31.25em) {
+      .overview__heading {
+        font-size: 1.5rem;
+        width: 25%; } }
   .overview__stars {
     margin-right: auto;
     display: flex; }

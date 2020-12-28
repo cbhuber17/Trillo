@@ -312,6 +312,11 @@
             font-size: 1.8rem;
             padding: 1.25rem 2rem;
         }
+
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: 1.5rem;
+            width: 25%;
+        }
     }
     
     &__stars {
